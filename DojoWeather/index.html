@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="d-flex align-center">
+        <div class="nav-container window-size d-flex justify-between align-center">
+            <h1>Dojo Weather</h1>
+            <ul class="cities d-flex justify-between align-center">
+                <li onclick="loadCity(0, 'change-temp')"><a href="#">Tirana</a></li>
+                <li onclick="loadCity(1, 'change-temp')"><a href="#">Berat</a></li>
+                <li onclick="loadCity(2, 'change-temp')"><a href="#">Korce</a></li>
+                <li onclick="loadCity(3, 'change-temp')"><a href="#">Durres</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="window-size">
+        <div class="main-container">
+            <div class="selected-city d-flex justify-between">
+                <h2 id="city"></h2>
+                <div class="d-flex justify-between align-center">
+                    <p>show temperature in </p>
+                    <select name="degree" id="change-temp" onchange="changeDegree(this)">
+                        <option value="c">&#176;C</option>
+                        <option value="f">&#176;F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="city-weather d-flex justify-between align-center"></div>
+        </div>
+    </main>
+
+    <div class="cookies-container window-size" id="cookies">
+        <div class="cookies d-flex justify-between align-center">
+            <img src="img/cookie.png" alt="cookie">
+            <div>
+                <h4>Stop! Cookie time</h4>
+                <p>We use cookies (sadly not the edible ones) 
+                    to personalize content and ads, 
+                    to provide social media features and 
+                    to analyse our traffic. <a href="#">Read more...</a>
+                </p>
+            </div>
+            <button class="d-flex align-center" onclick="acceptCookies('cookies')">I Accept</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
